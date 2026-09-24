@@ -1,0 +1,19 @@
+class Node:
+    def __init__(self,val):
+        self.left=None
+        self.right=None
+        self.val=val
+def a(r):
+    if r is None:
+        return
+    print(r.val)
+    a(r.left)
+    a(r.right)
+if __name__=="__main__":
+    r=Node(1)
+    r.left=Node(2)
+    r.right=Node(3)
+    r.left.left=Node(4)
+    r.left.right=Node(5)
+    a(r)
+    

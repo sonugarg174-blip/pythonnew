@@ -1,0 +1,24 @@
+class Node:
+    def __init__(self,val):
+        self.val=val
+        self.left=None
+        self.right=None
+def a(r,k):
+    if r is None:
+        return 
+    if k==0:
+        print(r.val)
+    a(r.left,k-1)
+    a(r.right,k-1)
+r=Node(1)
+r.left=Node(2)
+r.right=Node(3)
+r.left.left=Node(4)
+r.left.right=Node(5)
+r.right.left=Node(6)
+r.right.right=Node(7)
+r.left.left.left=Node(8)
+r.left.left.right=Node(9)
+r.left.left.right.left=Node(10)
+k=4
+a(r,k)

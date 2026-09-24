@@ -1,0 +1,13 @@
+def next(s):
+    if s == "":
+        print("a")
+    i=len(s)-1
+    while (s[i]=='z' and i>=1):
+        i-=1
+    if i==-1:
+        s=s+'a'
+    s=s.replace(s[i],chr(ord(s[i])+1),1)
+
+    return s
+s='d'
+print(next(s))
