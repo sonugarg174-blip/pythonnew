@@ -1,0 +1,42 @@
+class Node:
+    def __init__(self,data):
+         self.left_child=None
+         self.right_child=None
+         self.data=data
+def insert(root,new):
+        if root is None:
+            return Node(new)
+        if new<root.data:
+            root.left_child=insert(root.left_child,new)
+        elif new>root.data:
+            root.right_child=insert(root.right_child,new)
+        else:
+            print(f"{new} already exists in the tree")
+            return root
+def delete(root):
+        if root:
+            delete(root.left_child)
+            root.left_child=None
+            delete(root.right_child)
+            root.right_child=None
+            print(f"Deleting:{root.data}")
+            root.data=None
+root=insert(None,15)
+insert(root,27)
+insert(root,25)
+insert(root,16)
+insert(root,34)
+insert(root,1)
+insert(root,7)
+print('deleting all elements')
+delete(root)
+root=None
+
+
+
+
+
+
+
+        
+              

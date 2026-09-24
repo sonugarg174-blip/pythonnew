@@ -1,0 +1,14 @@
+class Node:
+   def __init__(self,data):
+         self.left=None
+         self.right=None
+         self.data=data
+def size(r):
+     if r is None:
+          return 0
+     return 1+size(r.left)+size(r.right)
+r=Node(1)
+r.left=Node(2)
+r.right=Node(3)
+print(size(r))
+     

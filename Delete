@@ -1,0 +1,31 @@
+heap=[10, 15, 20, 30, 40]
+def heapify(arr,n,i):
+    largest=i
+    left=2*i+1
+    right=2*i+2
+    if left<n and arr[left]>arr[largest]:
+        largest=left
+    if right<n and arr[right]>arr[largest]:
+        largest=right
+    if largest!=i:
+        arr[i],arr[largest]=arr[largest],arr[i]
+        heapify(arr,n,largest)
+def delete(heap,n):
+    a=len(heap)
+    if a==0:
+        return
+    for i in range(a):
+        if n==heap[i]:
+            break
+        else:
+            return 
+    heap[i],heap[a-1]=heap[a-1],heap[i]
+    heap.pop()
+    n=len(heap)
+    for i in range(heap//2,-1,-1):
+        heapify(heap,n,i)
+delete(heap,20)
+print(heap)
+
+
+ 
