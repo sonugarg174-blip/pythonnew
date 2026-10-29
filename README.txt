@@ -1,25 +1,36 @@
-PYTHON GRAPH PROGRAMS
+DYNAMIC PROGRAMMING 1 - PYTHON PROGRAMS
+=======================================
 
-This folder contains three beginner-friendly Python programs:
+This folder covers the topics in the M18 screenshot.
 
-1. 01_graph_adjacency_list.py
-   Implements an undirected graph using an adjacency list.
+1. introduction_dp_fibonacci.py
+   Shows the same Fibonacci problem solved by plain recursion, memoization,
+   and tabulation.
 
-2. 02_bfs.py
-   Implements Breadth-First Search (BFS), which uses a queue.
+2. memoization_vs_tabulation.py
+   Shows the difference between top-down memoization and bottom-up tabulation.
 
-3. 03_dfs_iterative.py
-   Implements iterative Depth-First Search (DFS), which uses a stack.
-   It does not use recursion.
+3. factorial_recursion_vs_dp.py
+   Compares factorial using recursion and a simple iterative table.
+   Note: factorial is not usually a strong example of DP because its
+   subproblems do not overlap; it is included to match the lesson title.
+
+4. longest_common_subsequence.py
+   Finds the length and one example of a Longest Common Subsequence (LCS).
+
+5. longest_increasing_subsequence.py
+   Finds the length of a Longest Increasing Subsequence (LIS).
+
+6. coin_change.py
+   Finds the minimum number of coins needed to make an amount.
+
+7. edit_distance.py
+   Finds the minimum insertions, deletions, and replacements to change one
+   word into another.
 
 HOW TO RUN
-1. Extract the ZIP file.
-2. Open the folder in VS Code.
-3. Open a terminal in that folder.
-4. Run one program at a time, for example:
-   python 01_graph_adjacency_list.py
-   python 02_bfs.py
-   python 03_dfs_iterative.py
+----------
+Extract the ZIP, open the folder in VS Code, then run for example:
+    python introduction_dp_fibonacci.py
 
-The examples use an undirected graph. The traversal order depends on the
-order in which neighbors are stored in the adjacency list.
+Python 3 is required. No extra packages are needed.
